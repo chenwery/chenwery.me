@@ -19,11 +19,13 @@ var view;
 app.set('port', process.env.PORT || 3000);
 
 //模板(jade)文件位置配置
-if (path.sep === '\\') {//windows(test environments)
+view = path.join(__dirname, '../template.blog');
+/*if (path.sep === '\\') {//windows(test environments)
     view = path.join(__dirname, '../template.blog');
 } else {//linux/unix(online environments)
     view = '/home/web/template.chenwery.blog';
-}
+}*/
+
 app.set('views', view);
 app.set('view engine', 'jade');
 
