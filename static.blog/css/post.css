@@ -1,6 +1,7 @@
 /*post page styles*/
 h1.post-page{
-    font-size: 1.5em;
+    font-size: 14px;
+    font-weight: normal;
 }
 h1.post-page a{
     color:#333;
@@ -13,6 +14,7 @@ section.header{
 }
 section.header h3.title{
     margin: 0;
+    font-size: 30px;
 }
 section.header strong.date{
     color: #ccc;

@@ -17,13 +17,17 @@ div.main{
     margin: 0 auto;
 }
 header{
-    margin-bottom: 1.3em;
+    margin-bottom: 2em;
 }
 header h1{
     margin: 0;
 }
+header h1 small{
+    font-size: small;
+    font-weight: normal;
+}
 footer{
-    margin-top:5em;
+    margin-top:4em;
     text-align: center;
 }
 section.nav span{
