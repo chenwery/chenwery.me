@@ -1,0 +1,13 @@
+extends ../common/layout
+
+block content
+  form
+    div
+      input(type='text', id='q', placeholder='百度翻译API')
+  br
+  div(id='result')
+  br
+  div(id='info')
+
+
+  script(src='#{staticPath}js/app/translation/translate.js')

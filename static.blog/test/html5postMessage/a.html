@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<p>a.html</p>
+
+<iframe id="ifr" src="http://localhost/test/html5postMessage/b.html"></iframe>
+<button onclick="g.postMessage()">postMessage</button>
+<script>
+var g = {};
+
+window.onload  = function () {
+    var target = 'http://localhost';
+    var ifr = document.getElementById('ifr');
+
+    //alert(ifr.contentWindow.postMessage);//√
+    //alert(ifr.contentWindow.document);//x
+
+    function postMessage() {
+        ifr.contentWindow.postMessage(new Date().getTime(), target);
+    }
+    g.postMessage = postMessage;
+
+    window.addEventListener('message', function (event) {
+        alert(event.data);
+    });
+}
+</script>
+</body>
+</html>

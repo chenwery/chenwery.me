@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    if !title
+      title CW Yeung
+    else
+      title #{title}
+    link(rel='shortcut icon', href='#{staticPath}img/favicon.ico')
+    link(rel='stylesheet', href='#{staticPath}css/normalize.css')
+    link(rel='stylesheet', href='#{staticPath}css/common.css')
+    if !isPostPage
+      link(rel='stylesheet', href='#{staticPath}css/index.css')
+    else
+      link(rel='stylesheet', href='#{staticPath}css/post.css')
+    script(src='#{staticPath}js/base/base.js')
+  body
+    div.wrapper
+        header
+          if !isPostPage
+            h1 CW Yeung
+          else
+            h1.post-page: a(href='/') CW Yeung
+        
+        div#main.main
+          block content
+        
+        footer
+          section.nav
+            a(href='') Lab
+            span &middot;
+            a(href='') About
+            span &middot;
+            a(href='http://weibo.com/chenwery') Weibo
+            span &middot;
+            a(href='https://twitter.com/chenwery') Twitter
+            span &middot;
+            a(href='https://github.com/chenwery') Github
+          section.cp
+            |&copy;2014
+            |Power by 
+            a(href='http://expressjs.com') Express

@@ -1,0 +1,9 @@
+extends ../common/layout
+
+block content
+    ul.post-list
+      each post in postList
+        li
+          article.clearfix
+            h3.title: a(href='/post/#{post.url}') #{post.title}
+            strong.date #{post.pub_date}

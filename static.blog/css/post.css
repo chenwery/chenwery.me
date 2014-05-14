@@ -1,0 +1,21 @@
+/*post page styles*/
+h1.post-page{
+    font-size: 1.5em;
+}
+h1.post-page a{
+    color:#333;
+}
+h1.post-page a:hover{
+    color:#fff;
+}
+section.header{
+    margin: 1.3em 0;
+}
+section.header h3.title{
+    margin: 0;
+}
+section.header strong.date{
+    color: #ccc;
+    font-weight: normal;
+    font-size: 0.8em;
+}

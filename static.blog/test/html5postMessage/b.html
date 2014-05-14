@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<p>b.html</p>
+<p id="test"></p>
+<script>
+window.addEventListener('message', function (event) {
+    console.log(event);
+    console.log(event.source.postMessage);
+    var p = document.createElement('p');
+    p.innerHTML = 'data: ' + event.data + '<br>origin: ' + event.origin + '<br>source: ' + event.source.toString();
+    document.body.appendChild(p);
+    event.source.postMessage('hehe', 'http://127.0.0.1');
+});
+</script>
+</body>
+</html>

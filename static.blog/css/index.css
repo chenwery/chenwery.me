@@ -1,0 +1,29 @@
+/*index post list*/
+ul.post-list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+ul.post-list li{
+    margin: 1.3em 0;
+}
+ul.post-list h3.title{
+    float: left;
+    margin: 0 20px 0 0;
+    font-weight: normal;
+    width: 26em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+ul.post-list h3.title a:visited{
+    color: #669;
+}
+ul.post-list h3.title a:visited:hover{
+    color: #fff;
+}
+ul.post-list strong.date{
+    float: right;
+    color:#ccc;
+    font-weight: normal;
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "module":     "./",
+    "get": [
+      {
+        "path":   "/",
+        "method": "index"
+      }
+    ]
+  },
+  {
+    "module":     "./user",
+    "get": [
+      {
+        "path":   "/users",
+        "method": "list"
+      }
+    ]
+  },
+  {
+    "module":     "./post",
+    "get": [
+      {
+        "path":   "/post/:name",
+        "method": "render"
+      }
+    ]
+  },
+  {
+    "module":     "./translation",
+    "get": [
+      {
+        "path":   "/translate",
+        "method": "index"
+      }
+    ],
+    "post": [
+      {
+        "path":   "/translate",
+        "method": "translate"
+      }
+    ]
+  },
+  {
+    "module":     "./dbtest",
+    "get": [
+      {
+        "path":   "/dbtest",
+        "method": "test"
+      }
+    ]
+  }
+]
