@@ -1,27 +1,32 @@
 exports.render = function (request, response) {
     var title = escape(request.params.name);
-    var sql = 'select title, content, date from postContent where title = "' + title + '"';
+    var sql = 'select * from postContent where description = "' + title + '"';
     var connection = require('../models/connection');
 
     connection.exec(sql, renderPost);
 
     function renderPost(result) {
-        var post = result.rows && result.rows.length ? result.rows[0] : null,
-            date;
+        var post = result.rows && result.rows.length ? result.rows[0] : null;
+        var date;
+        var title;
+        var content;
 
         if (!post) {
-            post = {};//TODO
+            response.redirect('/');
+            return;
         }
 
-        date = (post.date + '').split(' ');
-        post.date = date[1] + ' ' + date[2] + ', ' + date[3];
+        date = new Date(parseInt(post.createTime));
+        date = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+        title = unescape(post.title);
+        content = unescape(post.content);
 
         response.render('post/post', {
-            title: unescape(post.title),
+            title: title,
             isPostPage: true,
-            postTitle: unescape(post.title),
-            date: post.date,
-            content: unescape(post.content)
+            postTitle: title,
+            date: date,
+            content: content
         });
     }
 };

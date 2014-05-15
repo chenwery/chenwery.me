@@ -5,5 +5,5 @@ block content
       each post in postList
         li
           article.clearfix
-            h3.title: a(href='/post/#{post.url}') #{post.title}
-            strong.date #{post.pub_date}
+            h3.title: a(href='/post/#{post.description}') #{post.title}
+            strong.date #{post.date}
