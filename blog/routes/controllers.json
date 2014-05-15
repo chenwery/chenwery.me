@@ -49,5 +49,20 @@
         "method": "test"
       }
     ]
+  },
+  {
+    "module": "./publish",
+    "get": [
+      {
+        "path":    "/publish",
+        "method": "render"
+      }
+    ],
+    "post": [
+      {
+        "path": "/publish",
+        "method": "publish"
+      }
+    ]
   }
 ]
