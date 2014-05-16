@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 发表文章
+  body
+    if modify
+      div
+        strong 发表成功
+
+    form(action='/publish', method='post')
+      div
+        input(type='text', placeholder='标题', name='title')
+      div
+        input(type='text', placeholder='英文描述', name='description')
+      div
+        textarea(name='content', placeholder='内容', style='width:50em;height:40em;')
+      div
+        input(type='submit', value='发表')

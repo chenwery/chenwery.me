@@ -3,7 +3,7 @@
  */
 'use strict';
 exports.render = function (request, response) {
-    response.render('publish/publish');
+    response.render('pub/publish');
 };
 
 exports.publish = function (request, response) {
@@ -49,7 +49,7 @@ exports.publish = function (request, response) {
         successCount++;
         if (successCount === 2) {
             console.log('now render');
-            response.render('publish/publish', {
+            response.render('pub/publish', {
                 modify: true
             });
             return;
