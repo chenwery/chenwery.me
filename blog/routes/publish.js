@@ -10,7 +10,7 @@ exports.publish = function (request, response) {
     var connection = require('../models/connection');
     var info = request.body;
     var title = escape(info.title);
-    var description = info.description;
+    var description = info.description.replace(/\s/g, '-');
     var content = escape(info.content);
     var postListSql = 'insert into postList (title, description, createTime, lastModify, read_times) values (' +
         '\'' + title + '\', ' +
