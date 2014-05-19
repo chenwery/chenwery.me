@@ -3,6 +3,9 @@ exports.render = function (request, response) {
     var sql = 'select * from postContent where description = "' + title + '"';
     var connection = require('../models/connection');
 
+    //https://github.com/evilstreak/markdown-js
+    var markdown = require('markdown').markdown;
+
     connection.exec(sql, renderPost);
 
     function renderPost(result) {
@@ -19,7 +22,7 @@ exports.render = function (request, response) {
         date = new Date(parseInt(post.createTime));
         date = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
         title = unescape(post.title);
-        content = unescape(post.content);
+        content = markdown.toHTML(unescape(post.content));
 
         response.render('post/post', {
             title: title,
