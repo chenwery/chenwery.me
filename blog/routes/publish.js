@@ -29,7 +29,7 @@ exports.publish = function (request, response) {
 
     if (!title || ! description || !content) {
         response.redirect('/publish');
-        console.log('Error: without title or description or contents');
+        //console.log('Error: without title or description or contents');
         return;
     }
 
@@ -41,14 +41,14 @@ exports.publish = function (request, response) {
     });
 
     function render(result, next) {
-        console.log(result);
+        //console.log(result);
         if (!result.rows) {
             response.redirect('/publish');
             return;
         }
         successCount++;
         if (successCount === 2) {
-            console.log('now render');
+            //console.log('now render');
             response.render('pub/publish', {
                 modify: true
             });
@@ -56,8 +56,4 @@ exports.publish = function (request, response) {
         }
         typeof next === 'function' && next();
     }
-};
-
-exports.modify = function (request, response) {
-
 };

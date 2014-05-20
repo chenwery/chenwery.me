@@ -51,17 +51,47 @@
     ]
   },
   {
-    "module": "./publish",
+    "module":      "./publish",
     "get": [
       {
         "path":    "/publish",
-        "method": "render"
+        "method":  "render"
       }
     ],
     "post": [
       {
-        "path": "/publish",
-        "method": "publish"
+        "path":    "/publish",
+        "method":  "publish"
+      }
+    ]
+  },
+  {
+    "module":      "./modify",
+    "get": [
+      {
+        "path":    "/modify/:description",
+        "method":  "modifyPage"
+      }
+    ],
+    "post": [
+      {
+        "path":    "/modify",
+        "method":  "modify"
+      }
+    ]
+  },
+    {
+    "module":      "./delete",
+    "get": [
+      {
+        "path":    "/delete",
+        "method":  "list"
+      }
+    ],
+    "post": [
+      {
+        "path":    "/delete",
+        "method":  "delete"
       }
     ]
   }
