@@ -69,7 +69,7 @@
     "module":      "./modify",
     "get": [
       {
-        "path":    "/modify/:description",
+        "path":    "/modify",
         "method":  "modifyPage"
       }
     ],
