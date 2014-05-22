@@ -3,7 +3,13 @@
  */
 'use strict';
 exports.render = function (request, response) {
-    response.render('add/add');
+    response.render('add/add', {
+        type: '发表',
+        method: 'add',
+        title: '',
+        description: '',
+        content: ''
+    });
 };
 
 exports.add = function (request, response) {
@@ -12,26 +18,26 @@ exports.add = function (request, response) {
     var title = escape(info.title);
     var description = info.description.replace(/\s/g, '-');
     var content = escape(info.content);
-    var postListSql = 'insert into postList (title, description, createTime, lastModify, read_times) values (' +
+    var postListSql, postContentSql;
+    var successCount;
+    if (!title || ! description || !content) {
+        response.redirect('/add');
+        return;
+    }
+    postListSql = 'insert into postList (title, description, createTime, lastModify, read_times) values (' +
         '\'' + title + '\', ' +
         '\'' + description + '\', ' +
         '\'' + Date.now() + '\', ' +
         '\'' + Date.now() + '\', ' +
         '0' +
         ')';
-    var postContentSql = 'insert into postContent (title, description, createTime, content) values(' +
+    postContentSql = 'insert into postContent (title, description, createTime, content) values(' +
         '\'' + title + '\', ' +
         '\'' + description + '\', ' +
         '\'' + Date.now() + '\', ' +
         '\'' + content + '\'' +
         ')';
-    var successCount = 0;
-
-    if (!title || ! description || !content) {
-        response.redirect('/add');
-        //console.log('Error: without title or description or contents');
-        return;
-    }
+    successCount = 0;
 
     connection.exec(postListSql, function (result) {
         render(result, function () {

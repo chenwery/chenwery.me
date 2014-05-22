@@ -2,18 +2,17 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title 发表文章
+    title #{type}文章
   body
-    if modify
+    div #{type}文章
+    form(action='/#{method}', method='post')
+      if description
+        input(type='hidden', name='originDescription', value='#{description}')
       div
-        strong 发表成功
-
-    form(action='/add', method='post')
+        input(type='text', placeholder='标题', name='title', value='#{title}')
       div
-        input(type='text', placeholder='标题', name='title')
+        input(type='text', placeholder='英文描述', name='description', value='#{description}')
       div
-        input(type='text', placeholder='英文描述', name='description')
+        textarea(name='content', placeholder='内容', style='width:50em;height:40em;') #{content}
       div
-        textarea(name='content', placeholder='内容', style='width:50em;height:40em;')
-      div
-        input(type='submit', value='发表')
+        input(type='submit', value='#{type}')
