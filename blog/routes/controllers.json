@@ -42,26 +42,17 @@
     ]
   },
   {
-    "module":     "./dbtest",
+    "module":      "./add",
     "get": [
       {
-        "path":   "/dbtest",
-        "method": "test"
-      }
-    ]
-  },
-  {
-    "module":      "./publish",
-    "get": [
-      {
-        "path":    "/publish",
+        "path":    "/add",
         "method":  "render"
       }
     ],
     "post": [
       {
-        "path":    "/publish",
-        "method":  "publish"
+        "path":    "/add",
+        "method":  "add"
       }
     ]
   },

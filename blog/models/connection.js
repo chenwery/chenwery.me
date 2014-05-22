@@ -13,7 +13,7 @@ exports.exec = function (operation, callback) {
           "password": "密码",
           "database": "数据库"
         }
-     */
+    */
     var con = mysql.createConnection(config);
 
     con.connect();

@@ -3,10 +3,10 @@
  */
 'use strict';
 exports.render = function (request, response) {
-    response.render('pub/publish');
+    response.render('add/add');
 };
 
-exports.publish = function (request, response) {
+exports.add = function (request, response) {
     var connection = require('../models/connection');
     var info = request.body;
     var title = escape(info.title);
@@ -28,7 +28,7 @@ exports.publish = function (request, response) {
     var successCount = 0;
 
     if (!title || ! description || !content) {
-        response.redirect('/publish');
+        response.redirect('/add');
         //console.log('Error: without title or description or contents');
         return;
     }
@@ -43,15 +43,16 @@ exports.publish = function (request, response) {
     function render(result, next) {
         //console.log(result);
         if (!result.rows) {
-            response.redirect('/publish');
+            response.redirect('/add');
             return;
         }
         successCount++;
         if (successCount === 2) {
             //console.log('now render');
-            response.render('pub/publish', {
+            /*response.render('pub/publish', {
                 modify: true
-            });
+            });*/
+            response.redirect('/');
             return;
         }
         typeof next === 'function' && next();
