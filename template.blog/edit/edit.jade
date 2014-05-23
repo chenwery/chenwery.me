@@ -1,0 +1,9 @@
+extends ../common/layout
+
+block content
+    ul
+      each post in postList
+        li
+          span #{post.title}
+          a.edit(href='/modify/#{post.description}') 编辑
+          a.delete(href='/delete/#{post.description}') 删除

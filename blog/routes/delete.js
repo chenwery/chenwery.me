@@ -2,11 +2,20 @@
  * 删除
  */
 'use strict';
-
-exports.list = function (request, response) {
-    response.render();
-};
-
 exports.delete = function (request, response) {
-    response.redirect('/');
+    var description = request.params.description;
+    var connection = require('../models/connection');
+    var postListSql = 'delete from postList where description = \'' + description + '\'';
+    var postContentSql = 'delete from postContent where description = \'' + description + '\'';
+    connection.exec(postListSql, function (result) {
+        if (!result.rows) {
+            return;
+        }
+        connection.exec(postContentSql, function (result) {
+            if (!result.rows) {
+                return;
+            }
+            response.redirect('/edit');
+        });
+    });
 };

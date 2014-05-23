@@ -71,19 +71,24 @@
       }
     ]
   },
-    {
+  {
     "module":      "./delete",
     "get": [
       {
-        "path":    "/delete",
-        "method":  "list"
-      }
-    ],
-    "post": [
-      {
-        "path":    "/delete",
+        "path":    "/delete/:description",
         "method":  "delete"
       }
-    ]
+    ],
+    "post": []
+  },
+  {
+    "module":      "./edit",
+    "get": [
+      {
+        "path":    "/edit",
+        "method":  "edit"
+      }
+    ],
+    "post": []
   }
 ]
