@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "spm": {
     "alias": {
-      "jquery": "sea-modules/jquery/jquery/2.1.0/jquery",
-      "sea": "sea-modules/seajs/seajs/2.2.1/sea"
+      "jquery": "jquery/jquery/2.1.0/jquery",
+      "sea": "seajs/seajs/2.2.1/sea"
     }
   }
 }

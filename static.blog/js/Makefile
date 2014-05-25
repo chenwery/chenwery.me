@@ -1,3 +1,3 @@
 
-build:
-	@spm build
+init:
+	@spm install
