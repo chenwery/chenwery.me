@@ -7,3 +7,9 @@ block content
           article.clearfix
             h3.title: a(href='/post/#{post.description}') #{post.title}
             strong.date #{post.date}
+    script.
+     if (window.location.href.indexOf('http://chenwery.me') === -1) {
+        seajs.use('#{staticPath}js/pages/index/src/index');
+     } else {
+        seajs.use('pages/index/1.0.0/index');
+     }

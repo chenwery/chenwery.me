@@ -9,6 +9,16 @@ html
     link(rel='shortcut icon', href='#{staticPath}img/favicon.ico')
     link(rel='stylesheet', href='#{staticPath}css/normalize.css')
     link(rel='stylesheet', href='#{staticPath}css/common.css')
+    script(src="#{staticPath}js/sea-modules/seajs/seajs/2.2.1/sea.js")
+    script.
+      seajs.config({
+        base: '#{staticPath}js/sea-modules/',
+        alias: {
+          'jquery': 'jquery/jquery/2.1.0/jquery',
+          'jquery-debug': 'jquery/jquery/2.1.0/jquery-debug' 
+        }
+      });
+
     if !isPostPage
       link(rel='stylesheet', href='#{staticPath}css/index.css')
     else

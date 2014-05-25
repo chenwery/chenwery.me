@@ -1,0 +1,11 @@
+{
+    "family": "Y",
+    "name": "index",
+    "version": "1.0.0",
+    "spm": {
+        "alias": {
+            "jquery": "jquery"
+        },
+        "output": ["index.js"]
+    }
+}

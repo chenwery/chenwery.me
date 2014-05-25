@@ -1,0 +1,11 @@
+{
+  "family": "chenwery.me",
+  "name": "js",
+  "version": "1.0.0",
+  "spm": {
+    "alias": {
+      "jquery": "sea-modules\\jquery\\jquery\\2.1.0\\jquery",
+      "sea": "sea-modules\\seajs\\seajs\\2.2.1\\sea"
+    }
+  }
+}
