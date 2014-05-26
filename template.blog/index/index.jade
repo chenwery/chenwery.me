@@ -1,5 +1,8 @@
 extends ../common/layout
 
+block head
+    link(rel='stylesheet', href='#{staticPath}css/index.css')
+
 block content
     ul.post-list
       each post in postList
@@ -8,8 +11,10 @@ block content
             h3.title: a(href='/post/#{post.description}') #{post.title}
             strong.date #{post.date}
     if dev
+      //dev mode
       script.
         seajs.use('#{staticPath}js/pages/index/src/index');
     if !dev
+      //online mode
       script.
         seajs.use('pages/index/1.0.0/index');

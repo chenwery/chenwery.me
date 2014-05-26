@@ -1,0 +1,11 @@
+footer{
+    margin-top:4em;
+    text-align: center;
+}
+section.nav span{
+    margin: 0 1em;
+}
+footer section.cp{
+    font-size: 13px;
+    margin-top: 5px;
+}

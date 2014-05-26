@@ -1,7 +1,19 @@
 extends ../common/layout
 
+block head
+  link(rel='stylesheet', href='#{staticPath}css/post.css')
+
 block content
   section.header
     h3#title.title #{postTitle}
     strong#date.date #{date}
   section#mainContent.main-content !{content}
+
+  if dev
+    //dev mode
+    script.
+      seajs.use('#{staticPath}js/pages/post/src/post');
+  if !dev
+    //online mode
+    script.
+      seajs.use('pages/post/1.0.0/post');

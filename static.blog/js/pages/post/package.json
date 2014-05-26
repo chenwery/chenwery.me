@@ -1,0 +1,12 @@
+{
+    "family": "pages",
+    "name": "post",
+    "version": "1.0.0",
+    "spm": {
+        "alias": {
+            "jquery": "jquery",
+            "$": "$"
+        },
+        "output": ["post.js"]
+    }
+}

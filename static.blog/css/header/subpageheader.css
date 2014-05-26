@@ -1,0 +1,16 @@
+/*post page styles*/
+header{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+h1.post-page{
+    font-size: 14px;
+    font-weight: normal;
+}
+h1.post-page a{
+    color:#333;
+}
+h1.post-page a:hover{
+    color:#fff;
+}

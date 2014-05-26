@@ -1,0 +1,21 @@
+body{
+    color: #333;
+    font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+}
+.clearfix:before,
+.clearfix:after{
+  content: "";
+  display: table;
+}
+
+.clearfix:after{
+  clear: both;
+}
+a{
+    color: #6388A5;
+    text-decoration: none;
+}
+a:hover{
+    background-color: #6388A5;
+    color: #fff;
+}

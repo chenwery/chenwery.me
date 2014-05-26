@@ -1,0 +1,10 @@
+header{
+    margin-bottom: 2em;
+}
+header h1{
+    margin: 0;
+}
+header h1 small{
+    font-size: small;
+    font-weight: normal;
+}

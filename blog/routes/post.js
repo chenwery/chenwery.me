@@ -26,7 +26,6 @@ exports.render = function (request, response) {
 
         response.render('post/post', {
             title: title,
-            isPostPage: true,
             postTitle: title,
             date: date,
             content: content
