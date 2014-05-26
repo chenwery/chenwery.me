@@ -4,7 +4,8 @@
     "version": "1.0.0",
     "spm": {
         "alias": {
-            "jquery": "jquery"
+            "jquery": "jquery",
+            "$": "$"
         },
         "output": ["index.js"]
     }

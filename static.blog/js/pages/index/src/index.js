@@ -1,6 +1,6 @@
-define(function (require, modules) {
+define(function (require, exports, modules) {
     'use strict';
-    var $ = require('jquery');
+    var $ = require('$');
     console.log($(document.body));
     console.log(window.location.href);
 });

@@ -40,8 +40,10 @@ app.use(app.router);
 //静态文件路径配置
 if (path.sep === '\\') {//windows(test environments)
     app.locals.staticPath = 'http://localhost/';
+    app.locals.dev = true;
 } else {//linux/unix(online environments)
     app.locals.staticPath = 'http://static.chenwery.me/';
+    app.locals.dev = false;
 }
 
 // development only

@@ -1,13 +1,16 @@
-extends ../common/layout
+doctype
+html
+  head
+    meta(charset='utf-8')
+    title 百度翻译API
+  body
+    form
+      div
+        input(type='text', id='q', placeholder='输入需要翻译的词按回车')
+    br
+    div(id='result')
+    br
+    div(id='info')
 
-block content
-  form
-    div
-      input(type='text', id='q', placeholder='百度翻译API')
-  br
-  div(id='result')
-  br
-  div(id='info')
-
-
-  script(src='#{staticPath}js/app/translation/translate.js')
+    script(src='#{staticPath}js/base/base.js')
+    script(src='#{staticPath}js/app/translation/translate.js')
