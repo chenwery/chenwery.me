@@ -4,9 +4,14 @@ header{
 }
 header h1{
     margin: 0;
+    font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",Georgia,serif;
     font-size: 3em;
+    font-weight: normal;
+    font-style: italic;
 }
 header h1 small{
+    margin-left: 2em;
+    font-family: "Helvetica", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
     font-size: small;
-    font-weight: normal;
+    font-style: normal;
 }
