@@ -14,7 +14,8 @@ exports.modifyPage = function (request, response) {
                 type: '修改',
                 method: 'modify',
                 id: article.id,
-                title: unescape(article.title),
+                title: '修改文章',
+                postTitle: unescape(article.title),
                 description: description,
                 content: unescape(article.content)
             });
@@ -23,7 +24,8 @@ exports.modifyPage = function (request, response) {
                 type: '无法找到你要修改的',
                 method: 'modify',
                 id: '',
-                title: '',
+                title: ' 修改文章',
+                postTitle: '',
                 description: '',
                 content: ''
             });
@@ -71,7 +73,7 @@ exports.modify = function (request, response) {
         }
         successCount++;
         if (successCount === 2) {
-            response.redirect('/');
+            response.redirect('/post/' + description);
             return;
         }
         typeof next === 'function' && next();

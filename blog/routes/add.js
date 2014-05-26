@@ -6,7 +6,8 @@ exports.render = function (request, response) {
     response.render('add/add', {
         type: '发表',
         method: 'add',
-        title: '',
+        title: '发表文章',
+        postTitle: '',
         description: '',
         content: ''
     });
@@ -58,7 +59,7 @@ exports.add = function (request, response) {
             /*response.render('pub/publish', {
                 modify: true
             });*/
-            response.redirect('/');
+            response.redirect('/post/' + description);
             return;
         }
         typeof next === 'function' && next();
