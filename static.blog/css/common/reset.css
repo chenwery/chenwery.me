@@ -1,6 +1,6 @@
 body{
     color: #333;
-    font-family: "Helvetica", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+    font-family: "Helvetica", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", Tahoma, Arial, STHeiti, sans-serif;
 }
 .clearfix:before,
 .clearfix:after{
