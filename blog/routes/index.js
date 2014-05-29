@@ -5,7 +5,7 @@
 
 exports.index = function (req, res) {
     var connection = require('../models/connection');
-    var sql = 'select * from postList order by id desc';
+    var sql = 'select * from postList where description <> \'lab\' order by id desc';
     
     function renderPostList(result) {
         var rows = result.rows;
