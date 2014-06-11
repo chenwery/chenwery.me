@@ -19,3 +19,26 @@ a:hover{
     background-color: #6388A5;
     color: #fff;
 }
+blockquote{
+    background-color: rgba(102,128,153,0.05);
+    margin: 1em;
+}
+blockquote:before,
+blockquote:after{
+    display: block;
+    font-size: 2em;
+    line-height: 0.7em;
+}
+blockquote:before{
+    content: "“";
+    text-align: left;
+}
+blockquote:after{
+    content: "”";
+    text-align: right;
+}
+blockquote p{
+    margin: 0;
+    text-indent: 2em;
+    color: #999;
+}
