@@ -31,3 +31,8 @@ pre.prettyprint code{
     background-color:transparent !important;
     font-family: inherit;
 }
+
+p{
+    line-height: 2em;
+    text-indent: 2em;
+}
