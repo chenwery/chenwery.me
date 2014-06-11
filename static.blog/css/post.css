@@ -30,6 +30,7 @@ pre code,
 pre.prettyprint code{
     background-color:transparent !important;
     font-family: inherit;
+    color: #999;
 }
 
 p{
