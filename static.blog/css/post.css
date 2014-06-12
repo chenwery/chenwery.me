@@ -14,26 +14,17 @@ section.header strong.date{
     font-weight: normal;
     font-size: 0.8em;
 }
-
-pre,
-pre.prettyprint{
-    border:0 solid rgba(102,128,153,0.075);
-    border-left:10px solid rgba(102,128,153,0.075);
-    border-radius:0;
-    border-top-right-radius:5px;
-    border-bottom-right-radius:5px;
-    background-color: rgba(102,128,153,0.05);
-    padding: 10px 15px;
-    font-family: inherit;
+pre{
+    padding: 0.5em;
+    margin: 0.5em 0;
 }
 pre code,
 pre.prettyprint code{
-    background-color:transparent !important;
-    font-family: inherit;
-    color: #999;
+    font-family: "Helvetica", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", Tahoma, Arial, STHeiti, sans-serif;
 }
 
 p{
+    margin: 0;
     line-height: 2em;
-    text-indent: 2em;
+    text-indent: 1em;
 }

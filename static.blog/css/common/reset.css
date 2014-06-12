@@ -21,7 +21,8 @@ a:hover{
 }
 blockquote{
     background-color: rgba(102,128,153,0.05);
-    margin: 1em;
+    margin: 0.5em 0;
+    font-size: 0.8em;
 }
 blockquote:before,
 blockquote:after{
