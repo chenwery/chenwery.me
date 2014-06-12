@@ -9,6 +9,9 @@ block content
     strong#date.date #{date}
   section#mainContent.main-content !{content}
 
+  script(src='#{staticPath}third-party/google-code-prettify/prettify.js')
+  link(rel='stylesheet', href='#{staticPath}third-party/google-code-prettify/prettify.css')
+
   if dev
     //dev mode
     script.
@@ -17,13 +20,3 @@ block content
     //online mode
     script.
       seajs.use('pages/post/1.0.0/post');
-
-  //script(src='#{staticPath}js/utils/syntaxhighlight/shCore.js')
-  //script(src='#{staticPath}js/utils/syntaxhighlight/shAutoloader.js')
-  //script.
-  //  SyntaxHighlighter.autoloader(
-  //    'js jscript javascript  #{staticPath}js/utils/syntaxhighlight/shBrushJScript.js',
-  //    'css                    #{staticPath}js/utils/syntaxhighlight/shBrushCss.js',
-  //    'xml xhtml xslt html    #{staticPath}js/utils/syntaxhighlight/shBrushXml.js'
-  //  );
-  //  SyntaxHighlighter.all();
