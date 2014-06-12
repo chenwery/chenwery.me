@@ -1,4 +1,4 @@
-/*@import url(./syntaxhighlight/shCoreDefault.css);*/
+@import url(../third-party/google-code-prettify/prettify.css);
 
 section.header{
     margin: 1.3em 0;
