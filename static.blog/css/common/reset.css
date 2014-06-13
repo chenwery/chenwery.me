@@ -1,6 +1,7 @@
 body{
     color: #333;
-    font-family: "Helvetica", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", Tahoma, Arial, STHeiti, sans-serif;
+    /*font-family: "Helvetica", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", Tahoma, Arial, STHeiti, sans-serif;*/
+    font: 16px/1.5 Optima, Segoe, "Segoe UI", Candara, Calibri, Georgia, Verdana, Arial, sans-serif;
 }
 .clearfix:before,
 .clearfix:after{
@@ -20,7 +21,6 @@ a:hover{
     color: #fff;
 }
 blockquote{
-    background-color: rgba(102,128,153,0.05);
     margin: 0.5em 0;
     font-size: 0.8em;
 }
@@ -40,6 +40,6 @@ blockquote:after{
 }
 blockquote p{
     margin: 0;
-    text-indent: 2em;
     color: #999;
+    font-style: italic;
 }

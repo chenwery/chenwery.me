@@ -24,7 +24,5 @@ pre.prettyprint code{
 }
 
 p{
-    margin: 0;
-    line-height: 2em;
-    text-indent: 1em;
+    font: 16px/1.5 Optima, Segoe, "Segoe UI", Candara, Calibri, Georgia, Verdana, Arial, sans-serif;
 }
