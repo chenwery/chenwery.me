@@ -26,3 +26,6 @@ pre.prettyprint code{
 p{
     font: 16px/1.5 Optima, Segoe, "Segoe UI", Candara, Calibri, Georgia, Verdana, Arial, sans-serif;
 }
+ h4{
+    border-bottom: 1px solid #000;
+ }
