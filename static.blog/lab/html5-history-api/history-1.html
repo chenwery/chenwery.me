@@ -19,6 +19,7 @@
         }, false);
         window.addEventListener('popstate', function () {
             console.log(arguments);
+            console.log(history.state);
             btn.innerHTML = btn.innerHTML === 'pre' ? 'next' : 'pre';
             div.innerHTML = div.innerHTML === '2' ? '1' : '2';
         });
