@@ -3,26 +3,24 @@
 <head>
 </head>
 <body>
-<input type="file" id="test"/>
+<input type="file" id="test" multiple/>
 <script>
     var input = document.getElementById('test');
     function getFile(event) {
         var file = this.files[0];
-        console.log(file);
+        //console.log(file);
         /*if(!file.type.test(/image/)) {
             return;
         }*/
 
         var img = document.createElement("img");
-        //img.classList.add("obj");
-        img.file = file;
-
         document.body.appendChild(img);
 
         var reader = new FileReader();
         reader.onload = function(e) {
-            console.log(this);
-            console.log(e);
+            //console.log(this);
+            //console.log(e);
+            //console.log(this.result)
             img.src = this.result;
         }
         reader.readAsDataURL(file);
