@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<input type="file" id="test"/>
+<script>
+    var input = document.getElementById('test');
+    function getFile(event) {
+        var file = this.files[0];
+        console.log(file);
+        /*if(!file.type.test(/image/)) {
+            return;
+        }*/
+
+        var img = document.createElement("img");
+        //img.classList.add("obj");
+        img.file = file;
+
+        document.body.appendChild(img);
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            console.log(this);
+            console.log(e);
+            img.src = this.result;
+        }
+        reader.readAsDataURL(file);
+
+    }
+    function stop(e) {
+        e.stopPropagation();
+        e.preventDefault()
+    }
+    input.addEventListener('change', getFile);
+    //input.addEventListener('drop', getFile);
+    //var area = document.getElementById('area');
+    //area.addEventListener('drop', function(){console.log(1231321)});
+</script>
+</body>
+</html>
