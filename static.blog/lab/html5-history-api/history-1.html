@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <a href="history-2.html" id="btn">next</a>
+    <div id="div">1</div>
+    <script>
+        var btn = document.getElementById('btn');
+        var div = document.getElementById('div');
+        var to = 2;
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            btn.innerHTML = btn.innerHTML === 'pre' ? 'next' : 'pre';
+            div.innerHTML = div.innerHTML === '2' ? '1' : '2';
+            history.pushState({a:123}, '' + to, 'history-' + to + '.html');
+            to = to === 2 ? 1 : 2;
+        }, false);
+        window.addEventListener('popstate', function () {
+            console.log(arguments);
+            btn.innerHTML = btn.innerHTML === 'pre' ? 'next' : 'pre';
+            div.innerHTML = div.innerHTML === '2' ? '1' : '2';
+        });
+    </script>
+</body>
+</html>
