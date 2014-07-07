@@ -57,6 +57,14 @@ module.exports = function (grunt) {
         files: grunt.file.expandMapping(['dist/css/**/*.css'])
       }
     },
+    cssmin: {
+      minify: {
+        expand: true,
+        cwd: '<%= cssFolder %>/',
+        src: ['**/*.css'],
+        dest: '<%= cssFolder %>/'
+      }
+    },
     clean: {
       cssdist: ['<%= distFolder %>']
     },
@@ -69,10 +77,12 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-cssjoin'); 
+  grunt.loadNpmTasks('grunt-cssjoin');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('cl', ['clean']);
   grunt.registerTask('cp', ['copy']);
   grunt.registerTask('joincss', ['cssjoin']);
-  //grunt.registerTask('default', ['clean', 'copy', 'cssjoin']);
+  grunt.registerTask('mincss', ['cssmin']);
+  //grunt.registerTask('default', ['cl', 'cp', 'cssjoin']);
 };
