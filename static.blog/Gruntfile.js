@@ -54,7 +54,7 @@ module.exports = function (grunt) {
     },
     cssjoin: {
       parseImport: {
-        files: grunt.file.expandMapping(['csss/**/*.css'])
+        files: grunt.file.expandMapping(['dist/css/**/*.css'])
       }
     },
     clean: {
