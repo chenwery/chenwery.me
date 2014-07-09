@@ -1,26 +1,23 @@
 <!doctype html>
 <html>
 <head>
+    <meta charset="utf-8">
 </head>
 <body>
+<!--图片base64-->
+<p>图片base64</p>
 <input type="file" id="test" multiple/>
 <script>
     var input = document.getElementById('test');
     function getFile(event) {
         var file = this.files[0];
-        //console.log(file);
-        /*if(!file.type.test(/image/)) {
-            return;
-        }*/
 
         var img = document.createElement("img");
         document.body.appendChild(img);
 
         var reader = new FileReader();
         reader.onload = function(e) {
-            //console.log(this);
             //console.log(e);
-            //console.log(this.result)
             img.src = this.result;
         }
         reader.readAsDataURL(file);
@@ -34,6 +31,87 @@
     //input.addEventListener('drop', getFile);
     //var area = document.getElementById('area');
     //area.addEventListener('drop', function(){console.log(1231321)});
+</script>
+
+<!--createObjectURL-->
+<p>createObjectURL</p>
+<input type="file" id="createObjectURL" multiple/>
+<script>
+(function () {
+    var input = document.getElementById('createObjectURL');
+    function getFile(event) {
+        var file = this.files[0];
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            console.log(e);
+        }
+        reader.onerror = function () {console.log('error')};
+        reader.createObjectURL(file);
+
+    }
+    input.addEventListener('change', getFile);
+}());
+</script>
+
+<!--readAsBinaryString-->
+<p>readAsBinaryString</p>
+<input type="file" id="readAsBinaryString" multiple/>
+<script>
+(function () {
+    var input = document.getElementById('readAsBinaryString');
+    function getFile(event) {
+        var file = this.files[0];
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            console.log(e);
+        }
+        reader.readAsBinaryString(file);
+
+    }
+    input.addEventListener('change', getFile);
+}());
+</script>
+
+<!--readAsText-->
+<p>readAsText</p>
+<input type="file" id="readAsText" multiple/>
+<script>
+(function () {
+    var input = document.getElementById('readAsText');
+    function getFile(event) {
+        var file = this.files[0];
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            console.log(e);
+        }
+        reader.readAsText(file);
+
+    }
+    input.addEventListener('change', getFile);
+}());
+</script>
+
+<!--readAsArrayBuffer-->
+<p>readAsArrayBuffer</p>
+<input type="file" id="readAsArrayBuffer" multiple/>
+<script>
+(function () {
+    var input = document.getElementById('readAsArrayBuffer');
+    function getFile(event) {
+        var file = this.files[0];
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            console.log(e);
+        }
+        reader.readAsArrayBuffer(file);
+
+    }
+    input.addEventListener('change', getFile);
+}());
 </script>
 </body>
 </html>
