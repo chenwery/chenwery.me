@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <script src="http://libs.baidu.com/backbone/0.9.2/backbone.js"></script>
+        <script>
+          var start = new Date().getTime();
+          while (true) {
+              now = new Date().getTime();
+              if (4000 < (now - start)) {
+                  console.log('start render');
+                  break;
+              }
+          }
+        </script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <div>DOM</div>
+    </body>
+</html>
