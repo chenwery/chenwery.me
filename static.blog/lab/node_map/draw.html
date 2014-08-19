@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="jq.js"></script>
+    <script src="test-data.js"></script>
+
+    <style type="text/css">
+    .canvas-container{
+        height: 660px;
+        width: 1333px;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="canvas" width="1333px" height="670px"></canvas>
+    </div>
+    <script>
+    var FETCH_URL = 'http://www.baidu.com';//数据接口URL
+    var BACKGROUND_URL = 'bg.png';//背景图URL
+    var THREAD_JS_URL = 'getCircle.js';
+    </script>
+    <script src="draw.js"></script>
+</body>
+</html>
